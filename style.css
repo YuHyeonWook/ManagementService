@@ -48,57 +48,145 @@ body {
   color: black;
 }
 
-.contanier {
+.main {
   margin: 20px auto;
   width: 1400px;
-  /* 로딩 애니메이션 */
   /* tasks 목록 */
+  /* msg */
 }
-.contanier .inputBtnBundle {
+.main .inputBtnBundle {
   display: flex;
   gap: 10px;
   font-size: 18px;
 }
-.contanier .inputBtnBundle #addNew button {
+.main .inputBtnBundle #addNew button {
   font-size: 16px;
 }
-.contanier .inputBtnBundle #addNew button:hover {
+.main .inputBtnBundle #addNew button:hover {
   opacity: 0.8;
   transform: scale(0.98);
 }
-.contanier .inputBtnBundle #searchInput {
+.main .inputBtnBundle #searchInput {
   border: none;
   width: 30%;
 }
-.contanier .inputBtnBundle #searchInput:focus {
+.main .inputBtnBundle #searchInput:focus {
   border: 2px solid beige;
 }
-.contanier .inputBtnBundle #searchInput:hover {
+.main .inputBtnBundle #searchInput:hover {
   opacity: 0.8;
   transform: scale(0.98);
 }
-.contanier .main {
+.main .tasks {
   margin-top: 40px;
 }
-.contanier .main .subheading {
+.main .tasks .subheading {
   font-weight: 600;
   padding: 5px;
 }
-.contanier .main table {
+.main .tasks table {
   border: 1px solid #f7f7f8;
 }
-.contanier .main table thead tr {
+.main .tasks table thead tr {
   font-size: 18px;
 }
-.contanier .main table thead tr td {
+.main .tasks table thead tr td {
   text-align: center;
   vertical-align: middle;
 }
-.contanier .main table #tasks {
+.main .tasks table #tasks {
   font-size: 20px;
   overflow-y: scroll;
   border-radius: 20px;
 }
-.contanier #msg {
+.main #MsgUsername {
   color: red;
+}
+.main #MsgDate {
+  color: red;
+}
+.main #MsgAddress {
+  color: red;
+}
+
+.footer {
+  margin-top: 10rem;
+  margin-right: 16rem;
+  display: flex;
+  justify-content: end;
+}
+.footer ul {
+  display: flex;
+  gap: 15px;
+}
+.footer ul li {
+  list-style-type: none;
+}
+
+@media (min-width: 1025px) and (max-width: 1920px) {
+  .header .navigation ul li a {
+    font-size: 1.2rem;
+    padding: 20px 80px;
+  }
+  .main {
+    width: 1200px;
+  }
+  .main .inputBtnBundle #searchInput {
+    width: 25%;
+  }
+  .footer {
+    margin-top: 5rem;
+    margin-right: 10rem;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .header .navigation ul li a {
+    font-size: 1rem;
+    padding: 15px 60px;
+  }
+  .main {
+    width: 900px;
+  }
+  .main .inputBtnBundle #searchInput {
+    width: 30%;
+  }
+  .footer {
+    margin-top: 4rem;
+    margin-right: 6rem;
+  }
+}
+@media (min-width: 577px) and (max-width: 768px) {
+  .header .navigation ul li a {
+    font-size: 0.9rem;
+    padding: 10px 40px;
+  }
+  .main {
+    width: 700px;
+  }
+  .main .inputBtnBundle #searchInput {
+    width: 40%;
+  }
+  .footer {
+    margin-top: 3rem;
+    margin-right: 4rem;
+  }
+}
+@media (max-width: 576px) {
+  .header .navigation ul li a {
+    font-size: 0.8rem;
+    padding: 8px 20px;
+  }
+  .main {
+    width: 90%;
+  }
+  .main .inputBtnBundle {
+    flex-direction: column;
+  }
+  .main .inputBtnBundle #searchInput {
+    width: 100%;
+  }
+  .footer {
+    margin-top: 2rem;
+    margin-right: 2rem;
+  }
 }/*# sourceMappingURL=style.css.map */

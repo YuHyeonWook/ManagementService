@@ -51,9 +51,8 @@
           </li>
         </ul>
       </nav>
-      <!--[헤더: 로고 | 메뉴(도서관리, 회원관리, 대출관리) | 검색창]-->
     </header>
-    <div class="contanier">
+    <main class="main">
       <h2 class="mb-3">도서 회원 관리</h2>
       <div class="inputBtnBundle">
         <div id="addNew" data-bs-toggle="modal" data-bs-target="#form">
@@ -63,6 +62,7 @@
         </div>
         <input placeholder="회원명 검색" id="searchInput" type="search" />
       </div>
+
       <!-- register Modal -->
       <form
         class="modal fade"
@@ -86,7 +86,7 @@
             </div>
             <div class="modal-body">
               <img
-                class="img"
+                class="img rounded mx-auto d-block"
                 width="150"
                 height="150"
                 src="../images/free-icon-user-profile-4715330.png"
@@ -154,7 +154,13 @@
               ></button>
             </div>
             <div class="modal-body">
-              <img class="img" width="150" height="150" src="" alt="" />
+              <img
+                class="img rounded mx-auto d-block"
+                width="150"
+                height="150"
+                src=""
+                alt=""
+              />
               <br />
               <p>이름</p>
               <input
@@ -189,7 +195,7 @@
       </form>
 
       <!-- 목록 -->
-      <main class="main">
+      <div class="tasks">
         <div class="subheading">
           <h2>회원 정보</h2>
         </div>
@@ -208,10 +214,43 @@
           </thead>
           <tbody id="tasks"></tbody>
         </table>
-      </main>
-      <footer>footer</footer>
-      <!--[푸터: 회사 정보 | 약관 및 정책 | 소셜 링크]-->
-    </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <ul>
+        <li>
+          <a href="">
+            <img
+              src="https://github.githubassets.com/assets/facebook-de85282d23e6.svg"
+              alt=""
+              width="18"
+              height="18"
+            />
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <img
+              width="23"
+              height="16"
+              src="https://github.githubassets.com/assets/youtube-25bc21e924c8.svg"
+              alt=""
+            />
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/YuHyeonWook">
+            <img
+              class="GitHubImg"
+              width=""
+              height=""
+              src="https://github.githubassets.com/assets/github-mark-9be88460eaa6.svg"
+              alt=""
+            />
+          </a>
+        </li>
+      </ul>
+    </footer>
   </body>
 
   <script

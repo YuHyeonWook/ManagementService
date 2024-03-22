@@ -28,19 +28,6 @@ $file.addEventListener("change", (e) => {
   }
 });
 
-// /* 로딩 애니메이션 생성 */
-// const createLoadingAnimation = () => {
-//   const loadingDiv = document.createElement("div");
-//   loadingDiv.className = "loading";
-//   $form.appendChild(loadingDiv);
-// };
-
-// // 로딩 애니메이션 제거
-// let removeLoadingAnimation = () => {
-//   const loadingDiv = document.querySelector(".loading");
-//   $form.removeChild(loadingDiv);
-// };
-
 /* 모달 제출 */
 $form.addEventListener("submit", (e) => {
   e.preventDefault();

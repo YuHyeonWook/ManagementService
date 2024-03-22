@@ -16,9 +16,6 @@ html {
 
 body {
   background-color: #ebfbff;
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
 }
 
 .header {
@@ -48,34 +45,10 @@ body {
     }
   }
 }
-.contanier {
+.main {
   $hi: 30px;
   margin: 20px auto;
   width: 1400px;
-
-  /* 로딩 애니메이션 */
-  // .loading {
-  //   width: 50px;
-  //   height: 50px;
-  //   border: 5px solid rgba(255, 255, 255, 0.3);
-  //   border-radius: 50%;
-  //   margin: 50px auto;
-
-  //   border-top-color: #fff;
-  //   animation: spin 1s ease-in-out infinite;
-  //   -webkit-animation: spin 1s ease-in-out infinite;
-  // }
-
-  // @keyframes spin {
-  //   to {
-  //     -webkit-transform: rotate(360deg);
-  //   }
-  // }
-  // @-webkit-keyframes spin {
-  //   to {
-  //     -webkit-transform: rotate(360deg);
-  //   }
-  // }
 
   .inputBtnBundle {
     display: flex;
@@ -104,7 +77,7 @@ body {
   }
 
   /* tasks 목록 */
-  .main {
+  .tasks {
     margin-top: 40px;
     .subheading {
       font-weight: 600;
@@ -130,43 +103,137 @@ body {
     }
   }
 
-  #msg {
+  /* msg */
+  #MsgUsername {
+    color: red;
+  }
+  #MsgDate {
+    color: red;
+  }
+  #MsgAddress {
     color: red;
   }
 }
 
-//   .main {
-//     margin-top: 45px;
-//     .subheading {
-//       font-weight: 600;
-//       padding: 5px;
-//     }
+.footer {
+  margin-top: 10rem;
+  margin-right: 16rem;
+  display: flex;
+  justify-content: end;
+  ul {
+    display: flex;
+    gap: 15px;
+    li {
+      list-style-type: none;
+    }
+  }
+}
 
-//     #tasks {
-//       background-color: #f7f7f8;
-//       font-size: 18px;
-//       overflow-y: scroll;
-//       border: 10px solid #f7f7f8;
-//       border-radius: 20px;
+// 데스크탑
+@media (min-width: 1025px) and (max-width: 1920px) {
+  .header {
+    // 데스크탑 헤더 스타일
+    .navigation ul li a {
+      font-size: 1.2rem;
+      padding: 20px 80px;
+    }
+  }
 
-//       max-height: 600px;
-//       .contentBundle {
-//         display: flex;
-//         align-items: center;
-//         padding-top: 15px;
-//         padding-bottom: 15x;
-//         padding-left: 10px;
-//         border-bottom: 1px solid rgb(219, 218, 218);
-//         gap: 15px;
-//         font-size: 18px;
-//         .options {
-//           flex: 1;
-//           display: flex;
-//           justify-content: flex-end;
-//           padding-right: 5px;
-//         }
-//       }
-//     }
-//   }
+  .main {
+    width: 1200px;
+    // 데스크탑 메인 콘텐츠 스타일
+    .inputBtnBundle {
+      #searchInput {
+        width: 25%;
+      }
+    }
+  }
 
-// }
+  .footer {
+    margin-top: 5rem;
+    margin-right: 10rem;
+    // 데스크탑 푸터 스타일
+  }
+}
+
+// 노트북
+@media (min-width: 769px) and (max-width: 1024px) {
+  .header {
+    // 노트북 헤더 스타일
+    .navigation ul li a {
+      font-size: 1rem;
+      padding: 15px 60px;
+    }
+  }
+
+  .main {
+    width: 900px;
+    // 노트북 메인 콘텐츠 스타일
+    .inputBtnBundle {
+      #searchInput {
+        width: 30%;
+      }
+    }
+  }
+
+  .footer {
+    margin-top: 4rem;
+    margin-right: 6rem;
+    // 노트북 푸터 스타일
+  }
+}
+
+// 태블릿
+@media (min-width: 577px) and (max-width: 768px) {
+  .header {
+    // 태블릿 헤더 스타일
+    .navigation ul li a {
+      font-size: 0.9rem;
+      padding: 10px 40px;
+    }
+  }
+
+  .main {
+    width: 700px;
+    // 태블릿 메인 콘텐츠 스타일
+    .inputBtnBundle {
+      #searchInput {
+        width: 40%;
+      }
+    }
+  }
+
+  .footer {
+    margin-top: 3rem;
+    margin-right: 4rem;
+    // 태블릿 푸터 스타일
+  }
+}
+
+// 모바일
+@media (max-width: 576px) {
+  .header {
+    // 모바일 헤더 스타일
+    .navigation ul li a {
+      font-size: 0.8rem;
+      padding: 8px 20px;
+    }
+  }
+
+  .main {
+    width: 90%;
+    // 모바일 메인 콘텐츠 스타일
+    .inputBtnBundle {
+      flex-direction: column;
+      #searchInput {
+        width: 100%;
+      }
+    }
+  }
+
+  .footer {
+    margin-top: 2rem;
+    margin-right: 2rem;
+    // 모바일 푸터 스타일
+  }
+}
